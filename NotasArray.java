@@ -5,25 +5,25 @@ public class NotasArray {
 	 public static void main(String[] args) {
 	        Scanner scanner = new Scanner(System.in);
 	        
-	        // Lista para almacenar los nombres de los estudiantes
+	      
 	        ArrayList<String> estudiantes = new ArrayList<>();
 	        
-	        // Lista para almacenar las notas de los estudiantes
+	      
 	        ArrayList<Double> notasFinales = new ArrayList<>();
 	        
 	        int numEstudiantes;
 	        
-	        // Solicitar la cantidad de estudiantes
+	      
 	        System.out.print("Ingrese la cantidad de estudiantes: ");
 	        numEstudiantes = scanner.nextInt();
 	        
-	        // Ciclo para ingresar la información de cada estudiante
+	       
 	        for (int i = 0; i < numEstudiantes; i++) {
 	            System.out.print("Ingrese el nombre del estudiante " + (i + 1) + ": ");
 	            String nombre = scanner.next();
 	            estudiantes.add(nombre);
 	            
-	            // Solicitar las tres notas del estudiante
+	       
 	            double nota1, nota2, nota3;
 	            System.out.print("Ingrese la nota 1: ");
 	            nota1 = scanner.nextDouble();
@@ -32,15 +32,15 @@ public class NotasArray {
 	            System.out.print("Ingrese la nota 3: ");
 	            nota3 = scanner.nextDouble();
 	            
-	            // Calcular el promedio de las 3 notas
+	           
 	            double promedio = (nota1 + nota2 + nota3) / 3;
 	            notasFinales.add(promedio);
 	        }
 	        
-	        // Variables para contar estudiantes que ganan o pierden
+	  
 	        int ganan = 0, pierden = 0, recuperacion = 0;
 	        
-	        // Recorrer la lista de notas finales
+	      
 	        for (double notaFinal : notasFinales) {
 	            if (notaFinal >= 3.5) {
 	                ganan++;
@@ -51,12 +51,12 @@ public class NotasArray {
 	            }
 	        }
 	        
-	        // Mostrar resultados
+	        
 	        System.out.println("Cantidad de estudiantes que ganan: " + ganan);
 	        System.out.println("Cantidad de estudiantes que pierden: " + pierden);
 	        System.out.println("Cantidad de estudiantes que pueden recuperar: " + recuperacion);
 	        
-	        // Mostrar el listado de estudiantes con sus notas finales
+	      
 	        System.out.println("\nListado de estudiantes y sus notas finales:");
 	        for (int i = 0; i < estudiantes.size(); i++) {
 	            System.out.println(estudiantes.get(i) + ": " + notasFinales.get(i));
